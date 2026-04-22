@@ -664,28 +664,28 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
 
         <!-- === LAN NODES ROW 1 — Servers === -->
         <!-- AD-01 -->
-        <g class="node-g" onmouseenter="tipShow(event,'AD-01 — Contrôleur Primaire','10.0.211.66','Contrôleur de domaine principal','Rôles FSMO, authentification Kerberos, GPO et annuaire d\'entreprise.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'AD-01 — Contrôleur Primaire','10.0.220.66','Contrôleur de domaine principal','Rôles FSMO, authentification Kerberos, GPO et annuaire d\'entreprise.')" onmouseleave="tipHide()">
           <rect class="nr" x="24" y="68" width="108" height="82" rx="8" fill="#EDE7D9" stroke="#1D9E75" stroke-width="1.5"/>
           <text x="78" y="96" font-size="20" text-anchor="middle">🏢</text>
           <text x="78" y="116" font-size="9.5" fill="#1A1714" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">AD-01</text>
           <text x="78" y="130" font-size="8" fill="#7A7368" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.66</text>
         </g>
         <!-- AD-02 -->
-        <g class="node-g" onmouseenter="tipShow(event,'AD-02 — Contrôleur Secondaire','10.0.211.69','Contrôleur de domaine secondaire','Réplication avec AD-01. Haute disponibilité en cas de panne.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'AD-02 — Contrôleur Secondaire','10.0.220.69','Contrôleur de domaine secondaire','Réplication avec AD-01. Haute disponibilité en cas de panne.')" onmouseleave="tipHide()">
           <rect class="nr" x="146" y="68" width="108" height="82" rx="8" fill="#EDE7D9" stroke="#1D9E75" stroke-width="1.5"/>
           <text x="200" y="96" font-size="20" text-anchor="middle">🏛️</text>
           <text x="200" y="116" font-size="9.5" fill="#1A1714" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">AD-02</text>
           <text x="200" y="130" font-size="8" fill="#7A7368" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.69</text>
         </g>
         <!-- SRV-FIC -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-FIC','10.0.211.67','Serveur de fichiers','Stockage centralisé avec gestion fine des droits ACL liés aux groupes AD.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-FIC','10.0.220.67','Serveur de fichiers','Stockage centralisé avec gestion fine des droits ACL liés aux groupes AD.')" onmouseleave="tipHide()">
           <rect class="nr" x="268" y="68" width="108" height="82" rx="8" fill="#EDE7D9" stroke="#1D9E75" stroke-width="1.5"/>
           <text x="322" y="96" font-size="20" text-anchor="middle">🗂️</text>
           <text x="322" y="116" font-size="9.5" fill="#1A1714" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">SRV-FIC</text>
           <text x="322" y="130" font-size="8" fill="#7A7368" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.67</text>
         </g>
         <!-- TRUENAS -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-TRUENAS','10.0.211.68','NAS / Stockage ZFS','NAS TrueNAS haute capacité. Sauvegardes et redondance via ZFS.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-TRUENAS','10.0.220.68','NAS / Stockage ZFS','NAS TrueNAS haute capacité. Sauvegardes et redondance via ZFS.')" onmouseleave="tipHide()">
           <rect class="nr" x="390" y="68" width="62" height="82" rx="8" fill="#EDE7D9" stroke="#1D9E75" stroke-width="1.5"/>
           <text x="421" y="96" font-size="20" text-anchor="middle">💾</text>
           <text x="421" y="116" font-size="9" fill="#1A1714" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">TRUENAS</text>
@@ -694,21 +694,21 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
 
         <!-- LAN Row 2 — Security & supervision -->
         <!-- CENTREON -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-CENTREON','10.0.211.64','Supervision / Monitoring','Monitoring temps réel via SNMP et NRPE. Alertes et tableaux de bord.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-CENTREON','10.0.220.64','Supervision / Monitoring','Monitoring temps réel via SNMP et NRPE. Alertes et tableaux de bord.')" onmouseleave="tipHide()">
           <rect class="nr" x="24" y="206" width="116" height="82" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5"/>
           <text x="82" y="234" font-size="20" text-anchor="middle">📊</text>
           <text x="82" y="254" font-size="9.5" fill="#633806" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">CENTREON</text>
           <text x="82" y="268" font-size="8" fill="#854F0B" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.64</text>
         </g>
         <!-- WAZUH -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-WAZUH','10.0.211.63','SIEM / Sécurité','IDS, centralisation des logs de sécurité et réponse aux incidents.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-WAZUH','10.0.220.63','SIEM / Sécurité','IDS, centralisation des logs de sécurité et réponse aux incidents.')" onmouseleave="tipHide()">
           <rect class="nr" x="158" y="206" width="108" height="82" rx="8" fill="#FAECE7" stroke="#C4441A" stroke-width="1.5"/>
           <text x="212" y="234" font-size="20" text-anchor="middle">🛡️</text>
           <text x="212" y="254" font-size="9.5" fill="#712B13" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">WAZUH</text>
           <text x="212" y="268" font-size="8" fill="#993C1D" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.63</text>
         </g>
         <!-- W11 CLIENT -->
-        <g class="node-g" onmouseenter="tipShow(event,'W11 CLIENT','10.0.211.70','Poste utilisateur','Poste Windows 11 rattaché au domaine Active Directory.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'W11 CLIENT','10.0.220.70','Poste utilisateur','Poste Windows 11 rattaché au domaine Active Directory.')" onmouseleave="tipHide()">
           <rect class="nr" x="284" y="206" width="116" height="82" rx="8" fill="#F5F0E8" stroke="#7A7368" stroke-width="1.5"/>
           <text x="342" y="234" font-size="20" text-anchor="middle">💻</text>
           <text x="342" y="254" font-size="9.5" fill="#3D3830" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">W11 CLIENT</text>
@@ -730,21 +730,21 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
 
         <!-- === DMZ NODES === -->
         <!-- SRV-LAMP -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-LAMP','10.0.211.10','Serveur Web (DMZ)','LAMP Linux/Apache/MySQL/PHP. Accessible depuis l\'extérieur via le pare-feu.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-LAMP','10.0.220.10','Serveur Web (DMZ)','LAMP Linux/Apache/MySQL/PHP. Accessible depuis l\'extérieur via le pare-feu.')" onmouseleave="tipHide()">
           <rect class="nr" x="698" y="68" width="100" height="76" rx="8" fill="#FAECE7" stroke="#C4441A" stroke-width="1.5"/>
           <text x="748" y="95" font-size="20" text-anchor="middle">🌐</text>
           <text x="748" y="115" font-size="9" fill="#712B13" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">SRV-LAMP</text>
           <text x="748" y="129" font-size="8" fill="#993C1D" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.10</text>
         </g>
         <!-- NEXTCLOUD -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-NEXTCLOUD','10.0.211.2','Stockage cloud (DMZ)','Nextcloud — partage de fichiers et collaboration accessible depuis l\'extérieur.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-NEXTCLOUD','10.0.220.2','Stockage cloud (DMZ)','Nextcloud — partage de fichiers et collaboration accessible depuis l\'extérieur.')" onmouseleave="tipHide()">
           <rect class="nr" x="820" y="68" width="110" height="76" rx="8" fill="#FAECE7" stroke="#C4441A" stroke-width="1.5"/>
           <text x="875" y="95" font-size="20" text-anchor="middle">☁️</text>
           <text x="875" y="115" font-size="9" fill="#712B13" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">NEXTCLOUD</text>
           <text x="875" y="129" font-size="8" fill="#993C1D" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.2</text>
         </g>
         <!-- HAPROXY DMZ -->
-        <g class="node-g" onmouseenter="tipShow(event,'HAPROXY — DMZ','10.0.211.11','Load Balancer (DMZ)','HAProxy en DMZ. Répartition de charge pour les services web exposés.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'HAPROXY — DMZ','10.0.220.11','Load Balancer (DMZ)','HAProxy en DMZ. Répartition de charge pour les services web exposés.')" onmouseleave="tipHide()">
           <rect class="nr" x="952" y="68" width="110" height="76" rx="8" fill="#FAECE7" stroke="#C4441A" stroke-width="1.5"/>
           <text x="1007" y="95" font-size="20" text-anchor="middle">⚖️</text>
           <text x="1007" y="115" font-size="9" fill="#712B13" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">HAPROXY</text>
@@ -759,21 +759,21 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
 
         <!-- === EXT NODES === -->
         <!-- DCB CLIENT -->
-        <g class="node-g" onmouseenter="tipShow(event,'DCB CLIENT','172.28.211.220','Client zone externe','Accès depuis réseau externe peu fiable. Trafic via pare-feu obligatoire.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'DCB CLIENT','172.28.220.220','Client zone externe','Accès depuis réseau externe peu fiable. Trafic via pare-feu obligatoire.')" onmouseleave="tipHide()">
           <rect class="nr" x="214" y="706" width="112" height="62" rx="8" fill="#F5F0E8" stroke="#7A7368" stroke-width="1.5"/>
           <text x="270" y="728" font-size="18" text-anchor="middle">🖥️</text>
           <text x="270" y="748" font-size="9" fill="#3D3830" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">DCB CLIENT</text>
           <text x="270" y="761" font-size="7.5" fill="#7A7368" text-anchor="middle" font-family="'DM Mono',monospace">172.28.220.220</text>
         </g>
         <!-- SRV-DNS EXT -->
-        <g class="node-g" onmouseenter="tipShow(event,'SRV-DNS','10.0.211.65','Résolution DNS','Résolution des noms internes + redirection vers DNS publics.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'SRV-DNS','10.0.220.65','Résolution DNS','Résolution des noms internes + redirection vers DNS publics.')" onmouseleave="tipHide()">
           <rect class="nr" x="348" y="706" width="100" height="62" rx="8" fill="#F5F0E8" stroke="#7A7368" stroke-width="1.5"/>
           <text x="398" y="728" font-size="18" text-anchor="middle">🔍</text>
           <text x="398" y="748" font-size="9" fill="#3D3830" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">SRV-DNS</text>
           <text x="398" y="761" font-size="8" fill="#7A7368" text-anchor="middle" font-family="'DM Mono',monospace">10.0.220.65</text>
         </g>
         <!-- HAPROXY EXT -->
-        <g class="node-g" onmouseenter="tipShow(event,'HAPROXY — Externe','172.28.211.254','Load Balancer (Externe)','HAProxy côté externe. Point d\'entrée public vers les services DMZ.')" onmouseleave="tipHide()">
+        <g class="node-g" onmouseenter="tipShow(event,'HAPROXY — Externe','172.28.220.254','Load Balancer (Externe)','HAProxy côté externe. Point d\'entrée public vers les services DMZ.')" onmouseleave="tipHide()">
           <rect class="nr" x="466" y="706" width="112" height="62" rx="8" fill="#F5F0E8" stroke="#7A7368" stroke-width="1.5"/>
           <text x="522" y="728" font-size="18" text-anchor="middle">⚖️</text>
           <text x="522" y="748" font-size="9" fill="#3D3830" text-anchor="middle" font-family="'DM Sans',sans-serif" font-weight="600">HAPROXY EXT</text>
