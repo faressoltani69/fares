@@ -152,6 +152,12 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
 .article-analyse-label{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem}
 .article-analyse-text{font-size:13px;color:var(--ink2);line-height:1.6;font-style:italic}
 
+.veille-conclusion{background:var(--ink);padding:3rem;margin-top:2px}
+.veille-conclusion-label{font-family:var(--mono);font-size:10px;color:var(--rust);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.veille-conclusion-label::after{content:'';flex:1;height:1px;background:var(--rust);opacity:.3}
+.veille-conclusion-body p{font-size:14px;color:var(--cream2);line-height:1.9;margin-bottom:1.2rem}
+.veille-conclusion-body p:last-child{margin-bottom:0}
+
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
 .contact-card{background:var(--white);border:1px solid var(--sand);padding:2.5rem;text-decoration:none;color:var(--ink);transition:background 0.2s;display:block}
 .contact-card:hover{background:var(--rust)}
@@ -190,6 +196,21 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
   .card-tasks{grid-template-columns:1fr}
   .hero-name-block{flex-direction:column}
 }
+
+#btn-dl-tableau:hover{background:var(--rust)!important}
+
+/* FICHE SECTIONS */
+.fiche{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.fiche-item{background:var(--cream2);padding:1.5rem 1.8rem}
+.fiche-item.full{grid-column:1/-1;background:var(--white);border:1px solid var(--sand)}
+.fiche-label{font-family:var(--mono);font-size:10px;color:var(--rust);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+.fiche-label::after{content:'';flex:1;height:1px;background:var(--rust);opacity:.25}
+.fiche-text{font-size:13px;color:var(--ink2);line-height:1.8}
+.bilan-row{display:flex;gap:2px;margin-top:0;grid-column:1/-1}
+.bilan-col{flex:1;background:var(--ink);padding:1.5rem 1.8rem}
+.bilan-col .fiche-label{color:#C4441A}
+.bilan-col .fiche-text{color:var(--cream2)}
+@media(max-width:768px){.fiche{grid-template-columns:1fr}.bilan-row{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -280,9 +301,9 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
         <div class="tl-item">
           <div class="tl-date">1ère année · 6 semaines</div>
           <div class="tl-title">Stage 1 — Noursas</div>
-          <div class="tl-org">Développement web · Front-end &amp; Back-end</div>
-          <div class="tl-text">Participation active au développement d'un site web en HTML, CSS et PHP dans un contexte professionnel réel. Intégration de pages, structuration du contenu et premiers pas sur du back-end PHP.</div>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span class="tag">Front-end</span></div>
+          <div class="tl-org">Développement web · Site vitrine HTML/CSS</div>
+          <div class="tl-text">Conception et développement en télétravail d'un site vitrine pour une entreprise de bâtiment et peinture. Projet réalisé en totale autonomie en HTML et CSS, du recueil du besoin client jusqu'à la livraison.</div>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Site vitrine</span><span class="tag">Télétravail</span></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">Janv. — Fév. 2026 · 4 semaines</div>
@@ -310,15 +331,40 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
           <span class="stage-period">6 semaines</span>
         </div>
         <div class="card-h">Noursas</div>
-        <div class="card-org">Développement web · Front-end &amp; Back-end</div>
-        <p class="card-p">Stage de 6 semaines avec participation active au développement d'un site web. Mise en pratique concrète des compétences en développement front-end et back-end dans un environnement professionnel réel.</p>
+        <div class="card-org">Développement web · Site vitrine HTML/CSS</div>
+        <p class="card-p">Stage de 6 semaines réalisé en télétravail depuis mon domicile. Conception et développement complet d'un site vitrine pour une entreprise de bâtiment et peinture, en totale autonomie, du recueil du besoin client jusqu'à la livraison finale.</p>
         <ul class="card-tasks">
-          <li>Développement de pages web (HTML, CSS)</li>
-          <li>Intégration back-end en PHP</li>
-          <li>Application des bonnes pratiques web</li>
-          <li>Travail en contexte professionnel réel</li>
+          <li>Conception d'un site vitrine multi-pages</li>
+          <li>Développement en HTML5 et CSS3</li>
+          <li>Mise en page responsive</li>
+          <li>Gestion du projet en autonomie complète</li>
         </ul>
-        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span class="tag">Front-end</span><span class="tag">Back-end</span></div>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Site vitrine</span><span class="tag">Télétravail</span><span class="tag">Autonomie</span></div>
+
+        <div class="fiche">
+          <div class="fiche-item">
+            <div class="fiche-label">Contexte</div>
+            <div class="fiche-text">Stage de 6 semaines en première année de BTS SIO SISR, réalisé en télétravail depuis mon domicile. La mission consistait à concevoir intégralement un site vitrine pour Noursas, une entreprise spécialisée dans le bâtiment et la peinture, souhaitant asseoir sa présence en ligne.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Besoin</div>
+            <div class="fiche-text">L'entreprise ne disposait d'aucune présence web. Elle avait besoin d'un site vitrine simple et professionnel pour présenter ses activités (travaux de bâtiment, peinture intérieure et extérieure), valoriser ses réalisations et permettre aux clients potentiels de la contacter facilement.</div>
+          </div>
+          <div class="fiche-item full">
+            <div class="fiche-label">Environnement technique</div>
+            <div class="fiche-text">Développement en totale autonomie depuis mon poste personnel. Outils utilisés : VS Code, navigateurs web pour les tests (Chrome, Firefox). Langages : HTML5 et CSS3 uniquement. Aucun framework ni CMS — code entièrement écrit à la main. Échanges avec l'entreprise à distance pour les retours et validations.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Réalisation</div>
+            <div class="fiche-text">Conception et développement complet d'un site vitrine multi-pages en HTML/CSS : page d'accueil, présentation des services, galerie de réalisations et page de contact. Mise en page responsive, choix de la charte graphique en cohérence avec l'identité de l'entreprise, et structuration sémantique du contenu.</div>
+          </div>
+          <div class="bilan-row">
+            <div class="bilan-col">
+              <div class="fiche-label">Bilan</div>
+              <div class="fiche-text">Ce stage m'a appris à gérer un projet web de A à Z en totale autonomie, depuis la collecte du besoin client jusqu'à la livraison du site. Travailler seul à distance a développé mon organisation et ma rigueur. C'est une expérience fondatrice qui a confirmé mon attrait pour l'informatique et orienté mon parcours vers la spécialité SISR. Cette double compétence développement web et administration réseau est aujourd'hui un vrai atout : elle me permet d'avoir une vision globale du système d'information, de comprendre aussi bien la couche applicative que l'infrastructure qui la supporte, et d'être plus polyvalent sur le terrain.</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="stage-card">
         <div class="card-index">02</div>
@@ -337,6 +383,31 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
           <li>Installation et configuration des postes de travail</li>
         </ul>
         <div class="tags"><span class="tag">Baies de brassage</span><span class="tag">FOG Project</span><span class="tag">Déploiement OS</span><span class="tag">Administration réseau</span><span class="tag">Gestion de parc</span><span class="tag">Support N1/N2</span></div>
+
+        <div class="fiche">
+          <div class="fiche-item">
+            <div class="fiche-label">Contexte</div>
+            <div class="fiche-text">Stage de 4 semaines en deuxième année (janvier–février 2026) au sein du service informatique du Lycée Jacques Brel, mon propre établissement de formation. Intégration dans une équipe technique gérant l'ensemble du parc informatique et de l'infrastructure réseau de l'établissement scolaire.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Besoin</div>
+            <div class="fiche-text">Le service informatique devait faire face à deux problèmes concrets : des baies de brassage désorganisées rendant toute intervention difficile, et un processus de réinstallation des postes long et manuel. Il fallait structurer le câblage et automatiser le déploiement OS pour gagner en efficacité.</div>
+          </div>
+          <div class="fiche-item full">
+            <div class="fiche-label">Environnement technique</div>
+            <div class="fiche-text">Infrastructure du lycée sous Windows et Linux. Outils utilisés : FOG Project (serveur Linux Debian), réseau PXE, switch administrable, baies de brassage Cat5e/Cat6. Postes clients Windows 10/11. Logiciels de ticketing pour le support. Accès au VLAN de l'administration.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Réalisation</div>
+            <div class="fiche-text">Câblage, étiquetage et réorganisation complète des baies de brassage pour rendre l'infrastructure lisible et maintenable. Déploiement et configuration du serveur FOG Project : capture d'une image maître, mise en place du boot PXE, déploiement en masse sur plusieurs postes simultanément. Support utilisateurs N1/N2 en parallèle.</div>
+          </div>
+          <div class="bilan-row">
+            <div class="bilan-col">
+              <div class="fiche-label">Bilan</div>
+              <div class="fiche-text">Ce stage m'a confronté à des missions d'administration système et réseau concrètes, directement en lien avec ma spécialité SISR. J'ai acquis une vision globale du métier de technicien réseau en milieu éducatif et consolidé mes compétences sur des outils professionnels réels. La gestion des priorités et le travail au sein d'une équipe restreinte ont également renforcé mon autonomie et mon sens des responsabilités.</div>
+            </div>
+          </div>
+        </div>
 
         <div class="stage-photos">
           <span class="label" style="margin-bottom:0.5rem;display:block;margin-top:0">Photos du stage</span>
@@ -383,6 +454,31 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
           <li>Analyse des métriques de performance réseau</li>
         </ul>
         <div class="tags"><span class="tag">Centreon</span><span class="tag">Linux</span><span class="tag">SNMP</span><span class="tag">Monitoring</span><span class="tag">Alerting</span><span class="tag">Infrastructure</span></div>
+
+        <div class="fiche">
+          <div class="fiche-item">
+            <div class="fiche-label">Contexte</div>
+            <div class="fiche-text">Projet réalisé dans le cadre du BTS SIO SISR, en lien direct avec les enjeux de disponibilité des infrastructures. L'objectif était de mettre en place un outil de supervision permettant de surveiller en continu les équipements et services du réseau pédagogique.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Besoin</div>
+            <div class="fiche-text">Disposer d'un système de monitoring centralisé capable de détecter proactivement les pannes et dégradations de service avant qu'elles n'impactent les utilisateurs. Permettre une vision en temps réel de l'état de l'infrastructure (serveurs, services réseau, équipements).</div>
+          </div>
+          <div class="fiche-item full">
+            <div class="fiche-label">Environnement technique</div>
+            <div class="fiche-text">Serveur Centreon déployé sur Linux Debian en machine virtuelle (VMware). Protocoles utilisés : SNMP, NRPE pour la remontée des métriques. Équipements supervisés : serveurs Windows et Linux, routeurs, switchs, services DNS/DHCP/HTTP. Interface web Centreon pour la configuration et le monitoring.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Réalisation</div>
+            <div class="fiche-text">Installation et configuration du serveur Centreon sur Linux. Ajout des hôtes et services à superviser, configuration des agents SNMP/NRPE. Paramétrage des seuils d'alerte (Warning/Critical) et des notifications email. Création de dashboards personnalisés pour visualiser l'état des services critiques et les graphes de performance.</div>
+          </div>
+          <div class="bilan-row">
+            <div class="bilan-col">
+              <div class="fiche-label">Bilan</div>
+              <div class="fiche-text">Ce projet m'a apporté une compréhension approfondie des enjeux de disponibilité en production. J'ai découvert l'importance de la supervision proactive et appris à configurer des outils professionnels utilisés en entreprise. La mise en place des alertes m'a sensibilisé à la notion de SLA et à l'importance de la réactivité dans un service IT.</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="projet-card">
         <div class="card-index">02</div>
@@ -399,6 +495,31 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
           <li>Inventaire automatique via l'agent FOG</li>
         </ul>
         <div class="tags"><span class="tag">FOG Project</span><span class="tag">PXE Boot</span><span class="tag">Linux</span><span class="tag">Déploiement OS</span><span class="tag">Gestion de parc</span><span class="tag">Automatisation</span></div>
+
+        <div class="fiche">
+          <div class="fiche-item">
+            <div class="fiche-label">Contexte</div>
+            <div class="fiche-text">Projet mené en deuxième année, en complément du stage au Lycée Jacques Brel. L'objectif était d'industrialiser le déploiement des postes de travail en automatisant la réinstallation du système d'exploitation via le réseau, afin de réduire les interventions manuelles coûteuses en temps.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Besoin</div>
+            <div class="fiche-text">Supprimer les réinstallations manuelles poste par poste, longues et non reproductibles. Garantir une configuration homogène sur l'ensemble du parc (mêmes logiciels, paramètres identiques) et permettre un déploiement rapide en cas de panne ou de remplacement matériel.</div>
+          </div>
+          <div class="fiche-item full">
+            <div class="fiche-label">Environnement technique</div>
+            <div class="fiche-text">Serveur FOG Project installé sur Linux Debian. Réseau local avec configuration PXE sur le DHCP (options 66/67). Postes clients Windows 11 avec démarrage réseau activé dans le BIOS. Interface web FOG pour la gestion des images, groupes de machines et tâches planifiées. Agent FOG pour l'inventaire automatique.</div>
+          </div>
+          <div class="fiche-item">
+            <div class="fiche-label">Réalisation</div>
+            <div class="fiche-text">Installation du serveur FOG sur Linux et configuration du service DHCP pour le boot PXE. Création et capture d'une image maître Windows 11 depuis un poste de référence. Déploiement simultané sur plusieurs machines via tâches FOG. Mise en place de l'inventaire automatique du parc via l'agent FOG sur chaque poste.</div>
+          </div>
+          <div class="bilan-row">
+            <div class="bilan-col">
+              <div class="fiche-label">Bilan</div>
+              <div class="fiche-text">Ce projet m'a permis de maîtriser une solution de déploiement utilisée dans de nombreuses DSI. J'ai compris l'importance de l'automatisation dans la gestion de parcs informatiques importants et acquis des compétences directement valorisables en entreprise. La réduction du temps de déploiement observée a validé concrètement l'intérêt de la démarche.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -452,72 +573,142 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
     <span class="label">06 — Infrastructure</span>
     <h2>Schéma d'infrastructure réseau</h2>
     <div class="infra-intro">
-      <p>Architecture réseau segmentée en trois zones de sécurité : une zone <strong>EXT</strong> exposée à internet via HAProxy (reverse proxy / load balancer), une zone <strong>DMZ</strong> hébergeant les services publiés (serveur LAMP), et une zone <strong>LAN</strong> interne regroupant les serveurs Active Directory, DNS, fichiers et les postes clients. Le pare-feu IP Fire assure le cloisonnement et le routage entre ces zones.</p>
+      <p>Architecture réseau segmentée en trois zones de sécurité : une zone <strong>EXT</strong> (passerelle 172.28.220.253) hébergeant le client Debian et le serveur DNS externe, une zone <strong>DMZ</strong> (passerelle 10.0.220.1/26) avec les serveurs web LAMP, Web1 et Web2, et une zone <strong>LAN</strong> (passerelle 10.0.220.65/26) regroupant l'Active Directory, le stockage TrueNAS, la supervision Centreon &amp; Wazuh, le partage de fichiers et les postes clients Windows 11. Le pare-feu IP Fire assure le cloisonnement et le routage entre ces zones.</p>
     </div>
     <div class="infra-schema">
-      <svg width="100%" viewBox="0 0 680 600" xmlns="http://www.w3.org/2000/svg">
+      <svg width="100%" viewBox="0 0 860 720" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </marker>
         </defs>
-        <ellipse cx="560" cy="54" rx="88" ry="36" fill="none" stroke="#7A7368" stroke-width="1" stroke-dasharray="4 3"/>
-        <text x="560" y="48" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#1A1714">Internet</text>
-        <text x="560" y="66" text-anchor="middle" font-family="'DM Mono',monospace" font-size="11" fill="#7A7368">WAN</text>
-        <rect x="420" y="102" width="130" height="28" rx="14" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
-        <text x="485" y="120" text-anchor="middle" font-family="'DM Mono',monospace" font-size="11" fill="#A32D2D" letter-spacing="0.08em">ZONE EXT</text>
-        <rect x="448" y="148" width="136" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
-        <text x="516" y="168" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#712B13">HAProxy</text>
-        <text x="516" y="186" text-anchor="middle" font-family="'DM Mono',monospace" font-size="11" fill="#993C1D">10.0.220.17</text>
-        <rect x="266" y="266" width="148" height="62" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5"/>
-        <text x="340" y="286" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#633806">IP Fire</text>
-        <text x="340" y="302" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#854F0B">10.0.224.1/26 · 10.0.224.65/26</text>
-        <text x="340" y="318" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#854F0B">172.28.224.253</text>
-        <rect x="56" y="148" width="280" height="100" rx="10" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="5 4" opacity=".7"/>
-        <text x="72" y="167" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D" letter-spacing="0.1em">ZONE DMZ</text>
-        <rect x="76" y="178" width="136" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
-        <text x="144" y="198" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#712B13">Server LAMP</text>
-        <text x="144" y="216" text-anchor="middle" font-family="'DM Mono',monospace" font-size="11" fill="#993C1D">10.0.224.2</text>
-        <rect x="56" y="400" width="568" height="168" rx="10" fill="none" stroke="#1D9E75" stroke-width="1" stroke-dasharray="5 4" opacity=".6"/>
-        <text x="72" y="418" font-family="'DM Mono',monospace" font-size="10" fill="#0F6E56" letter-spacing="0.1em">ZONE LAN</text>
-        <rect x="68" y="428" width="110" height="52" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
-        <text x="123" y="448" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#0C447C">Server AD1</text>
-        <text x="123" y="464" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#185FA5">10.0.220.66</text>
-        <rect x="190" y="428" width="110" height="52" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
-        <text x="245" y="448" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#0C447C">Server AD2</text>
-        <text x="245" y="464" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#185FA5">10.0.220.67</text>
-        <rect x="312" y="428" width="110" height="52" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
-        <text x="367" y="448" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#085041">Server DNS</text>
-        <text x="367" y="464" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#0F6E56">10.0.220.70</text>
-        <rect x="434" y="428" width="90" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
-        <text x="479" y="448" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#2C2C2A">Client 1</text>
-        <text x="479" y="464" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#5F5E5A">10.0.220.75</text>
-        <rect x="538" y="428" width="74" height="52" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
-        <text x="575" y="444" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" font-weight="500" fill="#26215C">Srv.</text>
-        <text x="575" y="458" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" font-weight="500" fill="#26215C">Fichier</text>
-        <text x="575" y="472" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#3C3489">10.0.220.71</text>
-        <line x1="530" y1="88" x2="516" y2="148" stroke="#E24B4A" stroke-width="1.2" marker-end="url(#arr)" opacity=".7"/>
-        <line x1="480" y1="130" x2="390" y2="266" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arr)" opacity=".6"/>
-        <path d="M 448 174 L 380 174 L 340 266" fill="none" stroke="#D85A30" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arr)" opacity=".55"/>
-        <path d="M 292 282 L 212 282 L 212 230" fill="none" stroke="#E24B4A" stroke-width="1.2" marker-end="url(#arr)" opacity=".6"/>
-        <line x1="340" y1="328" x2="340" y2="400" stroke="#1D9E75" stroke-width="1.8" marker-end="url(#arr)" opacity=".7"/>
-        <line x1="123" y1="428" x2="270" y2="400" stroke="#1D9E75" stroke-width="0.8" opacity=".4"/>
-        <line x1="245" y1="428" x2="300" y2="400" stroke="#1D9E75" stroke-width="0.8" opacity=".4"/>
-        <line x1="367" y1="428" x2="340" y2="400" stroke="#1D9E75" stroke-width="0.8" opacity=".4"/>
-        <line x1="479" y1="428" x2="400" y2="400" stroke="#1D9E75" stroke-width="0.8" opacity=".4"/>
-        <line x1="575" y1="428" x2="440" y2="400" stroke="#1D9E75" stroke-width="0.8" opacity=".4"/>
-        <text x="248" y="240" font-family="'DM Mono',monospace" font-size="10" fill="#854F0B">DMZ : 10.0.224.1/26</text>
-        <text x="248" y="252" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D">EXT : 172.28.224.253</text>
-        <text x="352" y="370" font-family="'DM Mono',monospace" font-size="10" fill="#0F6E56">LAN : 10.0.224.65/26</text>
+
+        <!-- Internet -->
+        <ellipse cx="430" cy="44" rx="88" ry="32" fill="none" stroke="#7A7368" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="430" y="40" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#1A1714">Internet</text>
+        <text x="430" y="56" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#7A7368">WAN</text>
+
+        <!-- ZONE EXT -->
+        <rect x="500" y="88" width="340" height="120" rx="10" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="5 4" opacity=".7"/>
+        <text x="516" y="106" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D" letter-spacing="0.1em">ZONE EXT — 172.28.220.253</text>
+        <!-- HAProxy -->
+        <rect x="516" y="114" width="120" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+        <text x="576" y="134" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#712B13">HAProxy</text>
+        <text x="576" y="150" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D">10.0.220.17</text>
+        <!-- Deb Client -->
+        <rect x="652" y="114" width="120" height="52" rx="6" fill="#F5F0E8" stroke="#7A7368" stroke-width="1"/>
+        <text x="712" y="134" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#3D3830">Deb Client</text>
+        <text x="712" y="150" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#7A7368">10.0.220.66</text>
+        <!-- SRV DNS EXT -->
+        <rect x="516" y="174" width="256" height="22" rx="4" fill="none"/>
+        <text x="712" y="190" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#7A7368"/>
+
+        <!-- IP Fire (Firewall) -->
+        <rect x="330" y="248" width="160" height="64" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5"/>
+        <text x="410" y="270" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="13" font-weight="500" fill="#633806">IP Fire</text>
+        <text x="410" y="285" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#854F0B">DMZ: 10.0.220.1/26</text>
+        <text x="410" y="298" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#854F0B">LAN: 10.0.220.65/26 · EXT: 172.28.220.253</text>
+
+        <!-- ZONE DMZ -->
+        <rect x="20" y="88" width="460" height="140" rx="10" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="5 4" opacity=".7"/>
+        <text x="36" y="106" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D" letter-spacing="0.1em">ZONE DMZ — 10.0.220.1/26</text>
+        <!-- Srv LAMP -->
+        <rect x="36" y="114" width="120" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+        <text x="96" y="134" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#712B13">Srv LAMP</text>
+        <text x="96" y="150" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D">10.0.220.10</text>
+        <!-- Srv Web1 -->
+        <rect x="170" y="114" width="120" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+        <text x="230" y="134" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#712B13">Srv Web1</text>
+        <text x="230" y="150" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D">10.0.220.20</text>
+        <!-- Srv Web2 -->
+        <rect x="304" y="114" width="120" height="52" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+        <text x="364" y="134" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#712B13">Srv Web2</text>
+        <text x="364" y="150" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#993C1D">10.0.220.21</text>
+        <!-- SRV DNS EXT label inside DMZ zone -->
+        <rect x="438" y="114" width="28" height="0" rx="0"/>
+
+        <!-- SRV DNS EXT (standalone below EXT zone) -->
+        <rect x="650" y="220" width="160" height="52" rx="6" fill="#F5F0E8" stroke="#7A7368" stroke-width="1"/>
+        <text x="730" y="240" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#3D3830">Srv DNS</text>
+        <text x="730" y="256" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#7A7368">172.28.220.231</text>
+        <text x="730" y="268" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#A0968A">(Zone EXT)</text>
+
+        <!-- ZONE LAN -->
+        <rect x="20" y="356" width="820" height="330" rx="10" fill="none" stroke="#1D9E75" stroke-width="1" stroke-dasharray="5 4" opacity=".6"/>
+        <text x="36" y="374" font-family="'DM Mono',monospace" font-size="10" fill="#0F6E56" letter-spacing="0.1em">ZONE LAN — 10.0.220.65/26</text>
+
+        <!-- Row 1 LAN: AD, Srv Fichier, TrueNAS, W11 Client -->
+        <!-- AD -->
+        <rect x="36" y="382" width="120" height="52" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+        <text x="96" y="402" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#0C447C">Srv AD</text>
+        <text x="96" y="418" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#185FA5">10.0.220.69</text>
+
+        <!-- Srv Fichier -->
+        <rect x="170" y="382" width="120" height="52" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+        <text x="230" y="402" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#26215C">Srv Fichier</text>
+        <text x="230" y="418" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#3C3489">10.0.220.71</text>
+
+        <!-- TrueNAS -->
+        <rect x="304" y="382" width="120" height="52" rx="6" fill="#E6F5FB" stroke="#1B7FA5" stroke-width="1"/>
+        <text x="364" y="402" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#0C4F6E">TrueNAS</text>
+        <text x="364" y="418" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#185FA5">10.0.220.73</text>
+
+        <!-- W11 Client -->
+        <rect x="438" y="382" width="120" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+        <text x="498" y="402" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#2C2C2A">W11 Client</text>
+        <text x="498" y="418" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#5F5E5A">10.0.220.72</text>
+
+        <!-- Row 2 LAN: Centreon, Wazuh -->
+        <!-- Centreon -->
+        <rect x="36" y="460" width="140" height="52" rx="6" fill="#FFF7E6" stroke="#C47B1A" stroke-width="1"/>
+        <text x="106" y="480" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#7A4A00">Centreon</text>
+        <text x="106" y="496" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#C47B1A">10.0.220.79</text>
+        <text x="106" y="508" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#A0968A">Supervision</text>
+
+        <!-- Wazuh -->
+        <rect x="190" y="460" width="140" height="52" rx="6" fill="#FEF0F0" stroke="#C44A1A" stroke-width="1"/>
+        <text x="260" y="480" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="500" fill="#7A1A00">Wazuh</text>
+        <text x="260" y="496" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#C44A1A">10.0.220.80</text>
+        <text x="260" y="508" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#A0968A">SIEM / IDS</text>
+
+        <!-- Connections: Internet → HAProxy -->
+        <line x1="430" y1="76" x2="576" y2="114" stroke="#E24B4A" stroke-width="1.2" marker-end="url(#arr)" opacity=".6"/>
+
+        <!-- HAProxy → IPFire -->
+        <line x1="540" y1="166" x2="460" y2="248" stroke="#D85A30" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arr)" opacity=".6"/>
+
+        <!-- Internet → IPFire (direct) -->
+        <line x1="410" y1="76" x2="410" y2="248" stroke="#E24B4A" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)" opacity=".4"/>
+
+        <!-- IPFire → DMZ -->
+        <path d="M 360 266 L 200 266 L 200 228" fill="none" stroke="#E24B4A" stroke-width="1.2" marker-end="url(#arr)" opacity=".6"/>
+
+        <!-- IPFire → LAN -->
+        <line x1="410" y1="312" x2="410" y2="356" stroke="#1D9E75" stroke-width="1.8" marker-end="url(#arr)" opacity=".7"/>
+
+        <!-- LAN nodes → IPFire (uplinks, faint) -->
+        <line x1="96" y1="382" x2="350" y2="312" stroke="#1D9E75" stroke-width="0.7" opacity=".3"/>
+        <line x1="230" y1="382" x2="370" y2="312" stroke="#1D9E75" stroke-width="0.7" opacity=".3"/>
+        <line x1="364" y1="382" x2="400" y2="312" stroke="#1D9E75" stroke-width="0.7" opacity=".3"/>
+        <line x1="498" y1="382" x2="430" y2="312" stroke="#1D9E75" stroke-width="0.7" opacity=".3"/>
+        <line x1="106" y1="460" x2="360" y2="312" stroke="#C47B1A" stroke-width="0.7" opacity=".3"/>
+        <line x1="260" y1="460" x2="380" y2="312" stroke="#C44A1A" stroke-width="0.7" opacity=".3"/>
+
+        <!-- SRV DNS EXT ↔ IPFire -->
+        <line x1="650" y1="246" x2="490" y2="270" stroke="#7A7368" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)" opacity=".5"/>
       </svg>
     </div>
     <div class="infra-legend">
       <div class="legend-item"><div class="legend-dot ext"></div><div><div class="legend-text-title">HAProxy — 10.0.220.17</div><div class="legend-text-desc">Reverse proxy / load balancer exposé sur la zone EXT.</div></div></div>
-      <div class="legend-item"><div class="legend-dot fw"></div><div><div class="legend-text-title">IP Fire — Pare-feu</div><div class="legend-text-desc">Routeur / pare-feu central assurant le cloisonnement des trois zones.</div></div></div>
-      <div class="legend-item"><div class="legend-dot dmz"></div><div><div class="legend-text-title">Server LAMP — 10.0.224.2</div><div class="legend-text-desc">Serveur web hébergé en DMZ. Accessible via HAProxy.</div></div></div>
-      <div class="legend-item"><div class="legend-dot srv"></div><div><div class="legend-text-title">AD1 / AD2 — 10.0.220.66 / .67</div><div class="legend-text-desc">Contrôleurs de domaine Active Directory en LAN.</div></div></div>
-      <div class="legend-item"><div class="legend-dot lan"></div><div><div class="legend-text-title">Server DNS — 10.0.220.70</div><div class="legend-text-desc">Résolution de noms interne pour l'ensemble du parc LAN.</div></div></div>
-      <div class="legend-item"><div class="legend-dot" style="background:#534AB7"></div><div><div class="legend-text-title">Server Fichier — 10.0.220.71</div><div class="legend-text-desc">Partage de fichiers centralisé en LAN.</div></div></div>
+      <div class="legend-item"><div class="legend-dot fw"></div><div><div class="legend-text-title">IP Fire — Pare-feu central</div><div class="legend-text-desc">Cloisonnement et routage entre EXT, DMZ et LAN.</div></div></div>
+      <div class="legend-item"><div class="legend-dot dmz"></div><div><div class="legend-text-title">DMZ — Srv LAMP / Web1 / Web2</div><div class="legend-text-desc">.10 / .20 / .21 — Services web publiés, accessibles via HAProxy.</div></div></div>
+      <div class="legend-item"><div class="legend-dot srv"></div><div><div class="legend-text-title">Srv AD — 10.0.220.69</div><div class="legend-text-desc">Contrôleur de domaine Active Directory en LAN.</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#534AB7"></div><div><div class="legend-text-title">Srv Fichier — 10.0.220.71</div><div class="legend-text-desc">Partage de fichiers centralisé en LAN.</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1B7FA5"></div><div><div class="legend-text-title">TrueNAS — 10.0.220.73</div><div class="legend-text-desc">Stockage NAS centralisé en LAN.</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#C47B1A"></div><div><div class="legend-text-title">Centreon — 10.0.220.79</div><div class="legend-text-desc">Supervision des services et équipements réseau.</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#C44A1A"></div><div><div class="legend-text-title">Wazuh — 10.0.220.80</div><div class="legend-text-desc">SIEM / IDS — Détection d'intrusions et analyse de logs.</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#5F5E5A"></div><div><div class="legend-text-title">W11 Client — 10.0.220.72 · Deb Client — 10.0.220.66</div><div class="legend-text-desc">Postes clients Windows 11 (LAN) et Debian (EXT).</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7A7368"></div><div><div class="legend-text-title">Srv DNS — 172.28.220.231</div><div class="legend-text-desc">Serveur DNS externe dans la zone EXT.</div></div></div>
     </div>
   </div>
   <footer>© 2026 Fares Soltani — BTS SIO SISR · Portfolio personnel</footer>
@@ -528,43 +719,196 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
   <div class="inner">
     <span class="label">07 — Tableau de synthèse</span>
     <h2>Tableau de synthèse BTS SIO</h2>
-    <div class="tableau-header">
-      <p style="font-size:14px;color:var(--ink2);line-height:1.7">Tableau de synthèse des réalisations professionnelles — Épreuve E5 · Session 2026.</p>
-      <div class="tableau-meta">
-        <div>Nom : <span>SOLTANI Farès</span></div>
-        <div>Option : <span>SISR</span></div>
-        <div>Centre de formation : <span>Lycée Jacques-Brel</span></div>
-        <div>Période : <span>01/09/2024 — 06/2026</span></div>
-      </div>
+
+    <div style="margin-bottom:1.5rem">
+      <a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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"
+         download="Tableau_Competences_Soltani_Fares.xlsx"
+         style="display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--cream);padding:14px 28px;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s"
+         onmouseover="this.style.background='#C4441A'" onmouseout="this.style.background='#1A1714'">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4v-2h14v2H5z"/></svg>
+        Télécharger le tableau (.xlsx)
+      </a>
     </div>
-    <div class="tableau-scroll">
-      <table class="tc">
-        <thead>
-          <tr>
-            <th style="text-align:left">Réalisations professionnelles</th>
-            <th>Gérer le patrimoine informatique</th>
-            <th>Répondre aux incidents et demandes</th>
-            <th>Présence en ligne</th>
-            <th>Mode projet</th>
-            <th>Mettre à disposition un service</th>
-            <th>Développement professionnel</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-header"><td colspan="7">Réalisations en milieu professionnel — 1ère année (Noursas)</td></tr>
-          <tr><td>Création d'un site vitrine pour une entreprise de bâtiment</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Recueil des besoins et définition de l'arborescence</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Intégration de contenus et optimisation SEO</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Mise en ligne (Hébergement)</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="section-header"><td colspan="7">Réalisations en milieu professionnel — 2ème année (Lycée Jacques Brel)</td></tr>
-          <tr><td>Optimisation et réorganisation de baies de brassage</td><td class="tc-check">✓</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Identification et étiquetage des câbles</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Rangement (Cable Management) et raccordements</td><td class="tc-check">✓</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr><td>Déploiement industriel via FOG Project (Multi-OS)</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-check">✓</td></tr>
-          <tr class="sub-item"><td>Configuration du boot PXE et gestion du réseau</td><td class="tc-check">✓</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td></tr>
-          <tr class="sub-item"><td>Capture et déploiement d'images (Windows, Linux, Server)</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-empty">–</td><td class="tc-check">✓</td><td class="tc-check">✓</td></tr>
-        </tbody>
-      </table>
+
+    <div style="overflow-x:auto">
+    <table style="border-collapse:collapse;font-family:Arial,sans-serif;width:100%;min-width:900px;table-layout:fixed">
+
+      <!-- ROW 1 : Titre principal -->
+      <tr style="height:40px">
+        <td colspan="6" style="font-size:15px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 10px;border:1px solid #000">BTS SERVICES INFORMATIQUES AUX ORGANISATIONS</td>
+        <td colspan="2" style="font-size:15px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 10px;border:1px solid #000">SESSION 2026</td>
+      </tr>
+
+      <!-- ROW 2 : Sous-titre -->
+      <tr style="height:41px">
+        <td colspan="8" style="font-size:14px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 10px;border:1px solid #000">Tableau de synthèse des réalisations professionnelles</td>
+      </tr>
+
+      <!-- ROW 3 : Nom / Candidat -->
+      <tr style="height:40px">
+        <td colspan="5" style="font-size:13px;font-weight:bold;vertical-align:middle;padding:6px 10px;border:1px solid #000">NOM et prénom : SOLTANI Farès</td>
+        <td colspan="3" style="font-size:13px;font-weight:bold;vertical-align:middle;padding:6px 10px;border:1px solid #000">N° candidat :</td>
+      </tr>
+
+      <!-- ROW 4 : Centre / Option -->
+      <tr style="height:40px">
+        <td colspan="5" style="font-size:13px;font-weight:bold;vertical-align:middle;padding:6px 10px;border:1px solid #000">Centre de formation : Lycée Jacques-Brel</td>
+        <td style="font-size:13px;font-weight:bold;vertical-align:middle;padding:6px 10px;border:1px solid #000">Option :</td>
+        <td style="font-size:13px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 10px;border:1px solid #000">X SISR</td>
+        <td style="font-size:13px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 10px;border:1px solid #000">▢ SLAM</td>
+      </tr>
+
+      <!-- ROW 5 : URL portfolio -->
+      <tr style="height:40px">
+        <td colspan="8" style="font-size:13px;font-weight:bold;vertical-align:middle;padding:6px 10px;border:1px solid #000">Adresse URL du portfolio :</td>
+      </tr>
+
+      <!-- ROW 6 : En-têtes compétences -->
+      <tr style="height:90px;vertical-align:middle">
+        <td rowspan="2" style="font-size:11px;font-weight:bold;font-style:italic;text-align:center;vertical-align:middle;padding:6px 8px;border:2px solid #000;border-right:1px solid #000;width:28%">Compétences mises en œuvre<br><br><br>Réalisations professionnelles<br>(intitulé et liste des documents et productions associés)</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:7%">Période : 01/09/2024 au ??/06/2026</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:10%">Gérer le patrimoine informatique</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:13%">Répondre aux incidents et aux demandes d'assistance et d'évolution</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:13%">Développer la présence en ligne de l'organisation</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:10%">Travailler en mode projet</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;width:13%">Mettre à disposition des utilisateurs un service informatique</td>
+        <td style="font-size:11px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 6px;border:1px solid #000;border-right:2px solid #000;width:13%">Organiser son développement professionnel</td>
+      </tr>
+
+      <!-- ROW 7 : Sous-compétences -->
+      <tr style="vertical-align:top">
+        <td style="font-size:9px;text-align:center;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5"></td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5">▸Recenser et identifier les ressources numériques<br>▸Exploiter des référentiels, normes et standards adoptés par le prestataire informatique<br>▸Mettre en place et vérifier les niveaux d'habilitation associés à un service<br>▸Vérifier les conditions de la continuité d'un service informatique<br>▸Gérer des sauvegardes<br>▸Vérifier le respect des règles d'utilisation des ressources numériques</td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5">▸Collecter, suivre et orienter des demandes<br>▸Traiter des demandes concernant les services réseau et système, applicatifs<br>▸Traiter des demandes concernant les applications</td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5">▸Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques<br>▸Référencer les services en ligne de l'organisation et mesurer leur visibilité.<br>▸Participer à l'évolution d'un site Web exploitant les données de l'organisation.</td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5">▸Analyser les objectifs et les modalités d'organisation d'un projet<br>▸Planifier les activités<br>▸Évaluer les indicateurs de suivi d'un projet et analyser les écarts</td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;line-height:1.5">▸Réaliser les tests d'intégration et d'acceptation d'un service<br>▸Déployer un service<br>▸Accompagner les utilisateurs dans la mise en place d'un service</td>
+        <td style="font-size:9px;text-align:left;vertical-align:top;padding:5px 5px;border:1px solid #000;border-right:2px solid #000;line-height:1.5">▸Mettre en place son environnement d'apprentissage personnel<br>▸Mettre en œuvre des outils et stratégies de veille informationnelle<br>▸Gérer son identité professionnelle<br>▸Développer son projet professionnel</td>
+      </tr>
+
+      <!-- SECTION 1ère année -->
+      <tr style="height:18px">
+        <td colspan="8" style="font-size:13px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px 10px;border:1px solid #000;border-left:2px solid #000;border-right:2px solid #000">Réalisations en milieu professionnel en cours de première année</td>
+      </tr>
+
+      <!-- Réalisation 1 -->
+      <tr style="height:80px;vertical-align:top">
+        <td style="font-size:10px;vertical-align:top;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">Création d'un site vitrine pour une entreprise de bâtiment</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:top;padding:6px 4px;border:1px solid #000">X</td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:40px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Recueil des besoins et définition de l'arborescence</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:40px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Intégration de contenus et optimisation SEO</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:40px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Mise en ligne (Hébergement)</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+
+      <!-- Lignes vides 1ère année (rows 23-25) -->
+      <tr style="height:40px"><td style="border:1px solid #000;border-left:2px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000;border-right:2px solid #000"></td></tr>
+      <tr style="height:40px"><td style="border:1px solid #000;border-left:2px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000;border-right:2px solid #000"></td></tr>
+      <tr style="height:40px"><td style="border:1px solid #000;border-left:2px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000;border-right:2px solid #000"></td></tr>
+
+      <!-- SECTION 2ème année -->
+      <tr style="height:18px">
+        <td colspan="8" style="font-size:13px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px 10px;border:1px solid #000;border-left:2px solid #000;border-right:2px solid #000">Réalisations en milieu professionnel en cours de seconde année</td>
+      </tr>
+
+      <!-- Baies de brassage -->
+      <tr style="height:70px;vertical-align:top">
+        <td style="font-size:11px;font-weight:bold;vertical-align:top;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">Optimisation et réorganisation de baies de brassage</td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:top;padding:6px 4px;border:1px solid #000">X</td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:6px 4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:46px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Identification et étiquetage des câbles</td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:top;padding:6px 4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:46px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Rangement (Cable Management) et raccordements</td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:40px"><td style="border:1px solid #000;border-left:2px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000"></td><td style="border:1px solid #000;border-right:2px solid #000"></td></tr>
+
+      <!-- FOG Project -->
+      <tr style="height:67px;vertical-align:middle">
+        <td style="font-size:15px;font-weight:bold;vertical-align:middle;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">Déploiement industriel via FOG Project (Multi-OS)</td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000;border-right:2px solid #000">X</td>
+      </tr>
+      <tr style="height:40px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000">• Configuration du boot PXE et gestion du réseau</td>
+        <td style="border:1px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000">X</td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000"></td>
+        <td style="border:1px solid #000;border-right:2px solid #000"></td>
+      </tr>
+      <tr style="height:40px">
+        <td style="font-size:13px;padding:6px 8px;border:1px solid #000;border-left:2px solid #000;border-bottom:2px solid #000">• Capture et déploiement d'images (Windows, Linux, Server)</td>
+        <td style="border:1px solid #000;border-bottom:2px solid #000"></td>
+        <td style="border:1px solid #000;border-bottom:2px solid #000"></td>
+        <td style="border:1px solid #000;border-bottom:2px solid #000"></td>
+        <td style="border:1px solid #000;border-bottom:2px solid #000"></td>
+        <td style="border:1px solid #000;border-bottom:2px solid #000"></td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000;border-bottom:2px solid #000">X</td>
+        <td style="font-size:10px;font-weight:bold;text-align:center;vertical-align:middle;padding:4px;border:1px solid #000;border-right:2px solid #000;border-bottom:2px solid #000">X</td>
+      </tr>
+
+    </table>
     </div>
   </div>
   <footer>© 2026 Fares Soltani — BTS SIO SISR · Portfolio personnel</footer>
@@ -621,6 +965,15 @@ table.tc{width:100%;border-collapse:collapse;min-width:900px;font-size:12px}
         <div class="article-source">MIT Technology Review / Wired France — 2024</div>
         <p class="article-resume">Des startups comme Hudl, Wyscout ou SciSports exploitent des modèles d'IA entraînés sur des millions de séquences vidéo pour automatiser la détection de talents et évaluer les performances tactiques.</p>
         <div class="article-analyse"><div class="article-analyse-label">Analyse critique</div><div class="article-analyse-text">L'essor de l'IA dans le sport dépend d'une infrastructure solide : stockage massif, réseaux haut débit, virtualisation. Sans administration système rigoureuse, ces plateformes ne pourraient fonctionner.</div></div>
+      </div>
+    </div>
+
+    <div class="veille-conclusion">
+      <div class="veille-conclusion-label">Conclusion personnelle</div>
+      <div class="veille-conclusion-body">
+        <p>Cette veille technologique m'a permis de prendre conscience de l'ampleur des infrastructures IT qui se cachent derrière ce que je vis en tant que passionné de football. Ce que je voyais comme de simples statistiques à l'écran repose en réalité sur des architectures réseau complexes, des serveurs haute disponibilité, des protocoles de sécurité rigoureux — autant de domaines au cœur de ma formation SISR.</p>
+        <p>Ce qui m'a le plus marqué, c'est le parallèle direct entre les problématiques soulevées dans ces articles et les compétences que je développe au quotidien : segmentation réseau, supervision des services, gestion des accès, continuité de service. Le sport professionnel n'est plus seulement un terrain de jeu — c'est devenu une infrastructure IT à part entière, qui exige les mêmes exigences de fiabilité et de sécurité qu'une entreprise du CAC 40.</p>
+        <p>Cette veille m'a également donné envie d'explorer des secteurs que je n'aurais pas spontanément associés à l'administration système. Elle confirme que les métiers de l'infrastructure IT sont transverses, présents dans tous les domaines — y compris ceux qu'on aime. C'est une motivation supplémentaire pour continuer à monter en compétences.</p>
       </div>
     </div>
   </div>
